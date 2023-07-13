@@ -1,0 +1,13 @@
+Annotation 
+
+Run the CLI.--> python servercheck/cli.py --help
+
+Test the function by passing it the example JSON file in combination with the --server option. --> python servercheck/cli.py -f example.json --server "IP1:PORT1" -s "IP2:Port1"
+
+Install the tool and make it editable.--> pip install -e .
+
+Run the tool. --> servercheck -s "SERVER:1000" -s "SERVER2:2000" -f example.json
+
+Pull down the starter setup.py --> curl -O https://raw.githubusercontent.com/kennethreitz/setup.py/master/setup.py
+**Edit the file to add click as a dependency in the REQUIRED list, create the console_script, and remove the UploadCommand.**
+Entry Point section on setup.py --> entry_points={"console_scripts": ["servercheck=servercheck.cli:cli"]},
